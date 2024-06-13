@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.cabecera{
+    text-align: center;
+    color: aliceblue;
+    padding: 1rem;
+    margin: 1rem auto;
+}
+
+.logo{
+    width: 80%;
+}
+
+body{
+    background: rgb(93,27,210);
+    background: radial-gradient(circle, rgba(93,27,210,1) 0%, rgba(61,61,65,1) 100%);
+}
+
+.formu{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0.5rem auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.formu label{
+    width: 100%;
+    font-size: 1.5rem;
+    color: aliceblue;
+}
+.formu input{
+    width: 100%;
+    margin: 1rem;
+}
+
+h2{
+    font-size: 3rem;
+    color: aliceblue;
+}
+
+.oculto{
+    display: none;
+}
+
+.visible{
+    display: block;
+}
+
+.contenedor{
+    text-align: center;
+    padding: 1rem;
+}
+
+.contenedor h2{
+    margin: 0.5rem auto;
+}
