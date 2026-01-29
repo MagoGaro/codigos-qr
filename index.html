@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,25 +9,67 @@
     <script src="./lib/qrious-master/dist/qrious.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    <div class="cabecera">
-        <img class="logo" src="./img/tecno3f-color.png" alt="">
-        <h1>Generador Códigos QR</h1>
+    <div class="card">
+        <div class="cabecera">
+            <img class="logo" src="./img/tecno3f-color.png" alt="Logo">
+            <h1>Generador Códigos QR</h1>
+        </div>
+
+        <div class="tab-header">
+            <button class="tab-btn active" data-target="tab-generador">URL</button>
+            <button class="tab-btn" data-target="tab-placeholder">WIFI</button>
+        </div>
+
+        <div class="tab-body">
+            <!-- Tab 1: Generador -->
+            <div id="tab-generador" class="tab-content active">
+                <form action="" class="formu">
+                    <label for="url">Ingrese URL</label>
+                    <div class="input-group">
+                        <input type="text" name="url" id="url" placeholder="https://ejemplo.com">
+                    </div>
+                    <button id="generar">Generar QR</button>
+                </form>
+            </div>
+
+            <!-- Tab 2: WIFI -->
+            <div id="tab-placeholder" class="tab-content">
+                <form action="" class="formu">
+                    <label for="ssid">Nombre de Red (SSID)</label>
+                    <div class="input-group">
+                        <input type="text" name="ssid" id="ssid" placeholder="Mi Wifi">
+                    </div>
+
+                    <label for="password">Contraseña</label>
+                    <div class="input-group">
+                        <input type="password" name="password" id="password" placeholder="********">
+                    </div>
+
+                    <label for="security">Seguridad</label>
+                    <div class="input-group">
+                        <select name="security" id="security"
+                            style="width: 100%; padding: 15px; border-radius: 10px; border: 2px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.2); color: #fff; font-size: 1rem; outline: none; margin-bottom: 1rem;">
+                            <option value="WPA" style="color: black;">WPA/WPA2</option>
+                            <option value="WEP" style="color: black;">WEP</option>
+                            <option value="nopass" style="color: black;">Sin Contraseña</option>
+                        </select>
+                    </div>
+
+                    <button id="generar-wifi">Generar QR WiFi</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="contenedor oculto">
+            <h2>Su código Qr</h2>
+            <canvas id="codigo-qr"></canvas>
+        </div>
     </div>
-    <form action="" class="formu">
-        <label for="url">Ingrese URL</label>
-        <input type="text" name="url" id="url">
-        <button id="generar">Generar</button>
-    </form>
-    <div class="contenedor oculto">
-        <h2>Su código Qr</h2>
-    <canvas id="codigo-qr"></canvas>
+
     <script src="./js/script.js"></script>
-    </div>
-    
-</body>
-<script
-  src="https://code.jquery.com/jquery-3.7.1.js"
-  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
 </html>
