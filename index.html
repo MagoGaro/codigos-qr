@@ -20,6 +20,8 @@
         <div class="tab-header">
             <button class="tab-btn active" data-target="tab-generador">URL</button>
             <button class="tab-btn" data-target="tab-placeholder">WIFI</button>
+            <button class="tab-btn" data-target="tab-contacto">Contacto</button>
+            <button class="tab-btn" data-target="tab-evento">Evento</button>
         </div>
 
         <div class="tab-body">
@@ -58,6 +60,51 @@
                     </div>
 
                     <button id="generar-wifi">Generar QR WiFi</button>
+                </form>
+            </div>
+
+            <!-- Tab 3: Contacto -->
+            <div id="tab-contacto" class="tab-content">
+                <form action="" class="formu">
+                    <label for="vcard-nombre">Nombre y Apellido</label>
+                    <div class="input-group">
+                        <input type="text" name="vcard-nombre" id="vcard-nombre" placeholder="Ej: Juan Pérez">
+                    </div>
+                    <label for="vcard-tel">Teléfono</label>
+                    <div class="input-group">
+                        <input type="tel" name="vcard-tel" id="vcard-tel" placeholder="Ej: +54 9 11 1234 5678">
+                    </div>
+                    <label for="vcard-email">Email (Opcional)</label>
+                    <div class="input-group">
+                        <input type="email" name="vcard-email" id="vcard-email" placeholder="correo@ejemplo.com">
+                    </div>
+                    <button id="generar-contacto">Generar QR Contacto</button>
+                </form>
+            </div>
+
+            <!-- Tab 4: Evento -->
+            <div id="tab-evento" class="tab-content">
+                <form action="" class="formu">
+                    <label for="vevent-titulo">Título del Evento</label>
+                    <div class="input-group">
+                        <input type="text" name="vevent-titulo" id="vevent-titulo" placeholder="Reunión de Proyecto">
+                    </div>
+                    <label for="vevent-inicio">Inicio</label>
+                    <div class="input-group">
+                        <input type="datetime-local" name="vevent-inicio" id="vevent-inicio"
+                            style="width: 100%; padding: 15px; border-radius: 10px; border: 2px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.2); color: #fff; font-size: 1rem; outline: none; margin-bottom: 1rem; color-scheme: dark;">
+                    </div>
+                    <label for="vevent-fin">Fin</label>
+                    <div class="input-group">
+                        <input type="datetime-local" name="vevent-fin" id="vevent-fin"
+                            style="width: 100%; padding: 15px; border-radius: 10px; border: 2px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.2); color: #fff; font-size: 1rem; outline: none; margin-bottom: 1rem; color-scheme: dark;">
+                    </div>
+                    <label for="vevent-ubicacion">Ubicación (Opcional)</label>
+                    <div class="input-group">
+                        <input type="text" name="vevent-ubicacion" id="vevent-ubicacion"
+                            placeholder="Oficina Central o Enlace">
+                    </div>
+                    <button id="generar-evento">Generar QR Evento</button>
                 </form>
             </div>
         </div>
